@@ -6,6 +6,7 @@ authors = ["Kazutoshi Umemoto <umemoto@tkl.iis.u-tokyo.ac.jp>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pystan = "^2.19.1"
 
 [tool.poetry.dev-dependencies]
 
