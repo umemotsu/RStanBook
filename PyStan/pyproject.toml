@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "rstanbook-pystan"
+version = "0.1.0"
+description = ""
+authors = ["Kazutoshi Umemoto <umemoto@tkl.iis.u-tokyo.ac.jp>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
