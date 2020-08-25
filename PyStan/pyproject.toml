@@ -10,6 +10,7 @@ pystan = "^2.19.1"
 jupyterlab = "^2.2.4"
 pandas = "^1.1.1"
 seaborn = "^0.10.1"
+arviz = "^0.9.0"
 
 [tool.poetry.dev-dependencies]
 
