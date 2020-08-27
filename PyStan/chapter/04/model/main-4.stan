@@ -1,10 +1,10 @@
 data {
   int N;
-  real x[N];
-  real y[N];
+  real X[N];
+  real Y[N];
 
   int N_new;
-  real x_new[N_new];
+  real X_new[N_new];
 }
 
 parameters {
@@ -14,25 +14,25 @@ parameters {
 }
 
 transformed parameters {
-  real y_base[N];
+  real Y_base[N];
 
   for (n in 1:N) {
-    y_base[n] = a + b * x[n];
+    Y_base[n] = a + b * X[n];
   }
 }
 
 model {
   for (n in 1:N) {
-    y[n] ~ normal(y_base[n], sigma);
+    Y[n] ~ normal(Y_base[n], sigma);
   }
 }
 
 generated quantities {
-  real y_base_new[N_new];
-  real y_new[N_new];
+  real Y_base_new[N_new];
+  real Y_new[N_new];
 
   for (n in 1:N_new) {
-    y_base_new[n] = a + b * x_new[n];
-    y_new[n] = normal_rng(y_base_new[n], sigma);
+    Y_base_new[n] = a + b * X_new[n];
+    Y_new[n] = normal_rng(Y_base_new[n], sigma);
   }
 }

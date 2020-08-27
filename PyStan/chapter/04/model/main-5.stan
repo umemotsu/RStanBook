@@ -1,7 +1,7 @@
 data {
   int N;
-  real x[N];
-  real y[N];
+  real X[N];
+  real Y[N];
 }
 
 parameters {
@@ -12,6 +12,6 @@ parameters {
 
 model {
   for (n in 1:N) {
-    y[n] ~ normal(a + b * x[n], sigma);
+    Y[n] ~ normal(a + b * X[n], sigma);
   }
 }
